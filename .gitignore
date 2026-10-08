@@ -1,0 +1,23 @@
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# database & uploads
+*.db
+*.sqlite
+uploads/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# node / next
+node_modules/
+.next/
+*.tsbuildinfo
+
+.DS_Store
