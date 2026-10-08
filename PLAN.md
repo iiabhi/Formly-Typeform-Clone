@@ -16,7 +16,7 @@ Tick the ✔ column only after verifying in the running app.
 |---|---|---|
 | Frontend: Next.js (TypeScript) | S0 | |
 | Backend: Python with FastAPI | S0, S2, S3 | |
-| Database: SQLite, own schema design | S1 (§2) | |
+| Database: SQLite, own schema design | S1 (§2) | ✔ |
 | Respondent flow is real & shareable, no auth to fill | S3 public API, S6 `/to/[slug]`, S12 deployed | |
 
 **1. Form Builder**
@@ -42,7 +42,7 @@ Tick the ✔ column only after verifying in the running app.
 | Delete form | S2, S4 | |
 | Publish / unpublish | S2, S8 | |
 | Generates a shareable public link | S2 slug, S8 share modal + `/share` page | |
-| All form definitions persist | S1, S2 | |
+| All form definitions persist | S1, S2 | S1 ✔ |
 
 **3. Respondent Flow**
 | Requirement | Where | ✔ |
@@ -63,7 +63,7 @@ Tick the ✔ column only after verifying in the running app.
 | Per-form responses view (table/list) | S3, S9 | |
 | View an individual response in full | S3, S9 drawer | |
 | Basic summary stats per question (counts for choice questions etc.) | S3 stats_service, S9 | |
-| All responses persist | S1, S3 | |
+| All responses persist | S1, S3 | S1 ✔ |
 
 **5. Typeform Experience**
 | Requirement | Where | ✔ |
@@ -100,8 +100,8 @@ Tick the ✔ column only after verifying in the running app.
 | Requirement | Where | ✔ |
 |---|---|---|
 | UI totally resembles Typeform (studied before starting) | screenshots in `docs/screenshots/` before S4; S7, S10 | |
-| Seed: a couple of published forms, mixed types, existing responses | S1 | |
-| Own database schema (evaluated) | S1, design decisions in README | |
+| Seed: a couple of published forms, mixed types, existing responses | S1 | ✔ |
+| Own database schema (evaluated) | S1, design decisions in README | S1 ✔ (README in S12) |
 | README: setup, tech stack, architecture overview, DB schema, API overview, assumptions | S12 | |
 | Original work, no copied repos | CLAUDE.md rule, all sessions | |
 | Public GitHub repo containing `frontend/` and `backend/` | S0 layout, S12 | |
@@ -577,7 +577,7 @@ the key decisions, and 3 likely questions with answers."* Save answers in `docs/
 
 ## Progress
 - [x] Session 0 — Scaffolding
-- [ ] Session 1 — DB models + seed
+- [x] Session 1 — DB models + seed
 - [ ] Session 2 — Creator API
 - [ ] Session 3 — Public + results API
 - [ ] Session 4 — Foundation + workspace

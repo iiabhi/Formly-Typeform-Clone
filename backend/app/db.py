@@ -41,3 +41,10 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, expire_on_commit=False
 def get_db() -> Iterator[Session]:
     with SessionLocal() as session:
         yield session
+
+
+def init_db() -> None:
+    """Create any missing tables. Models must be imported first so they register on Base."""
+    import app.models  # noqa: F401
+
+    Base.metadata.create_all(engine)

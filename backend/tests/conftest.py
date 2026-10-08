@@ -4,6 +4,7 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session, sessionmaker
 
+import app.models  # noqa: F401  (registers tables on Base)
 from app.db import Base, get_db, make_engine
 from app.main import app
 
@@ -21,6 +22,5 @@ def db() -> Iterator[Session]:
 @pytest.fixture()
 def client(db: Session) -> Iterator[TestClient]:
     app.dependency_overrides[get_db] = lambda: db
-    with TestClient(app) as test_client:
-        yield test_client
+    yield TestClient(app)
     app.dependency_overrides.clear()
